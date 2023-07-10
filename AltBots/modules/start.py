@@ -12,7 +12,7 @@ START_BUTTON = [
         Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/AlonesHeaven")
     ],
     [
-        Button.url("• ʀᴇᴘᴏ •", "https://t.me/ALONE_WAS_BOT")
+        Button.url("• ʀᴇᴘᴏ •", "https://github.com/TeamAloneOp/AloneXSpam/fork")
     ]
 ]
 
