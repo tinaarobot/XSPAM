@@ -5,7 +5,7 @@ from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from pyrogram import enums 
 from config import X1, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
-from ROYEDITX.data import ALTRON
+from ROYEDITX.data import AVISHA 
 
 ECHO = []
 
@@ -17,7 +17,7 @@ async def echo(event):
             reply_msg = await event.get_reply_message()
             user_id = reply_msg.sender_id
 
-            if user_id in ALTRON:
+            if user_id in AVISHA:
                 await event.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀʟᴛʀᴏɴ'ꜱ ᴏᴡɴᴇʀ.")
             elif user_id == OWNER_ID:
                 await event.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ.")
