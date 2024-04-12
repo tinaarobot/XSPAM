@@ -3,7 +3,7 @@ import base64
 
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-
+from pyrogram import enums 
 from config import X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
 from AltBots.data import ALTRON
 
@@ -21,7 +21,7 @@ ECHO = []
 @X9.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))
 async def echo(event):
-    if event.sender_id in SUDO_USERS:
+    if event.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER::
         if event.reply_to_msg_id:
             reply_msg = await event.get_reply_message()
             user_id = reply_msg.sender_id
