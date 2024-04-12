@@ -1,5 +1,5 @@
 {
-    "name": "ALONE HERE.",
+    "name": "SPAM BOT",
     "logo": "https://telegra.ph//file/9e8ce3092848a1bc5d9d6.jpg",
     "keywords": [
         "telegram",
@@ -8,61 +8,16 @@
         "PythonX",
         "SpamBots"
     ],
-    "repository": "https://github.com/ItZxSTaR/XBOTS",
+    "repository": "https://github.com/tinaarobot/XSPAM",
     "env": {
       "BOT_TOKEN": {
         "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
         "value": "",
         "required": true
       },
-      "BOT_TOKEN2": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN3": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN4": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN5": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN6": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN7": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN8": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN9": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN10": {
-        "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
-        "value": "",
-        "required": true
-      },
       "CMD_HNDLR": {
         "description": "Custom command handler.",
-        "value": ".",
+        "value": "/",
         "required": false
       },
       "SUDO_USERS": {
