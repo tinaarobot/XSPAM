@@ -19,7 +19,7 @@ from datetime import datetime
 @X9.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
 async def ping(e):
-    if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or member.status == enums.ChatMemberStatus.OWNER:
+    if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         start = datetime.now()
         altron = await e.reply(f"» __ᴀʟᴏɴᴇ__")
         end = datetime.now()
