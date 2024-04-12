@@ -3,7 +3,7 @@ import asyncio
 
 from AltBots.data import GROUP, PORMS
 from config import X1, X2, X3, X4, X5 , X6, X7, X8, X9, X10, SUDO_USERS, CMD_HNDLR as hl
-
+from pyrogram import enums
 from random import choice
 from telethon import events, functions, types
 
@@ -35,7 +35,7 @@ async def gifspam(e, smex):
 @X9.on(events.NewMessage(incoming=True, pattern=r"\%sspam(?: |$)(.*)" % hl))
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%sspam(?: |$)(.*)" % hl))
 async def spam(event: events):
-    if event.sender_id in SUDO_USERS:
+    if event.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         altron = event.text.split(" ", 2)
         mk = await event.get_reply_message()
 
@@ -78,7 +78,7 @@ async def spam(event: events):
 @X9.on(events.NewMessage(incoming=True, pattern=r"\%spspam(?: |$)(.*)" % hl))
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%spspam(?: |$)(.*)" % hl))
 async def pspam(event):
-    if event.sender_id in SUDO_USERS:
+    if event.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         if event.chat_id in GROUP:
             await event.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ᴀʟᴛʀᴏɴ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
         else:
@@ -106,7 +106,7 @@ async def pspam(event):
 @X9.on(events.NewMessage(incoming=True, pattern=r"\%shang(?: |$)(.*)" % hl))
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%shang(?: |$)(.*)" % hl))
 async def hang(e):
-    if e.sender_id in SUDO_USERS:
+    if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         if e.chat_id in GROUP:
             await e.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ᴀʟᴛʀᴏɴ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
         else:
