@@ -2,7 +2,7 @@ import sys
 import heroku3
 
 from config import X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, CMD_HNDLR as hl
-
+from pyrogram import enums
 from os import execl, getenv
 from telethon import events
 from datetime import datetime
@@ -19,7 +19,7 @@ from datetime import datetime
 @X9.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
 async def ping(e):
-    if e.sender_id in SUDO_USERS:
+    if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or member.status == enums.ChatMemberStatus.OWNER:
         start = datetime.now()
         altron = await e.reply(f"» __ᴀʟᴏɴᴇ__")
         end = datetime.now()
