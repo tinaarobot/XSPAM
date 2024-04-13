@@ -26,6 +26,13 @@ async def raid(e):
             uid = entity.id
 
         try:
+                 if uid in AVISHA:
+                await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ xsᴘᴀᴍ'ꜱ ᴏᴡɴᴇʀ.")
+            elif uid == OWNER_ID:
+                await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ.")
+            elif uid in SUDO_USERS:
+                await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ.")
+                 else:
                 first_name = entity.first_name
                 counter = int(xraid[1])
                 username = f"[{first_name}](tg://user?id={uid})"
