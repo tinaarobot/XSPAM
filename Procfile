@@ -1,1 +1,1 @@
-TheAltron: python -m main.py
+Avisha: python -m main.py
