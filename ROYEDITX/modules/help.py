@@ -1,39 +1,37 @@
 from telethon import events, Button
-
 from config import X1, SUDO_USERS, CMD_HNDLR as hl
-
 
 HELP_STRING = f"**✦ ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴꜱ ꜰᴏʀ xsᴘᴀᴍ ʜᴇʟᴘ ⏤͟͟͞͞★**"
 
 HELP_BUTTON = [
     [
-      Button.inline("ꜱᴘᴀᴍ", data="spam"),
-      Button.inline("ʀᴀɪᴅ", data="raid")
+        Button.inline("ꜱᴘᴀᴍ", data="spam"),
+        Button.inline("ʀᴀɪᴅ", data="raid")
     ],
     [
-      Button.inline("ᴇxᴛʀᴀ", data="extra")
+        Button.inline("ᴇxᴛʀᴀ", data="extra")
     ],
     [
-      Button.url("ᴜᴘᴅᴀᴛᴇ", "https://t.me/roy_editx"),
-      Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/the_friendz")
+        Button.url("ᴜᴘᴅᴀᴛᴇ", "https://t.me/roy_editx"),
+        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/the_friendz")
     ]
-  ]
+]
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
 async def help(event):
-    if event.sender_id in SUDO_USERS:
-        try:
-          await event.client.send_file(event.chat_id,
-              "https://graph.org/file/cacbdddee77784d9ed2b7.jpg",
-              caption=HELP_STRING,
-              buttons=HELP_BUTTON
-              )
-        except Exception as e:
-            await event.client.send_message(event.chat_id, f"✦ ᴀɴ ᴇxᴄᴇᴘᴛɪᴏɴ ᴏᴄᴄᴜʀᴇᴅ, ᴇʀʀᴏʀ ➥ {str(e)}")
+    try:
+        await event.client.send_file(
+            event.chat_id,
+            "https://graph.org/file/cacbdddee77784d9ed2b7.jpg",
+            caption=HELP_STRING,
+            buttons=HELP_BUTTON
+        )
+    except Exception as e:
+        await event.client.send_message(event.chat_id, f"✦ ᴀɴ ᴇxᴄᴇᴘᴛɪᴏɴ ᴏᴄᴄᴜʀᴇᴅ, ᴇʀʀᴏʀ ➥ {str(e)}")
 
 
-extra_msg = f"""
+extra_msg = """
 **✦  ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ ♥︎**
 
 ❖ 𝗨𝘀𝗲𝗿𝗕𝗼𝘁 ➥ **ᴜꜱᴇʀʙᴏᴛ ᴄᴍᴅꜱ ⏤͟͟͞͞★**
@@ -51,8 +49,7 @@ extra_msg = f"""
   ● {hl}leave ➠ Type in the Group bot will auto leave that group
 """
 
-                 
-raid_msg = f"""
+raid_msg = """
 **✦ ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ♥︎**
 
 ❖ 𝗥𝗮𝗶𝗱 ➥ **ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴀɪᴅ ᴏɴ ᴀɴʏ ɪɴᴅɪᴠɪᴅᴜᴀʟ ᴜꜱᴇʀ ꜰᴏʀ ɢɪᴠᴇɴ ʀᴀɴɢᴇ ⏤͟͟͞͞★**
@@ -80,7 +77,7 @@ raid_msg = f"""
   ● {hl}craid <count> <reply to user>
 """
 
-spam_msg = f"""
+spam_msg = """
 **✦ ꜱᴘᴀᴍ ᴄᴏᴍᴍᴀɴᴅꜱ ♥︎**
 
 ❖ 𝗦𝗽𝗮𝗺 ➥ **ꜱᴘᴀᴍꜱ ᴀ ᴍᴇꜱꜱᴀɢᴇ ⏤͟͟͞͞★**
@@ -92,57 +89,45 @@ spam_msg = f"""
 
 ❖ 𝗛𝗮𝗻𝗴 ➥ **ꜱᴘᴀᴍꜱ ʜᴀɴɢɪɴɢ ᴍᴇꜱꜱᴀɢᴇ ꜰᴏʀ ɢɪᴠᴇɴ ᴄᴏᴜɴᴛᴇʀ ⏤͟͟͞͞★**
   ● {hl}hang <counter>
-"""                     
-           
-           
+"""
+
 @X1.on(events.CallbackQuery(pattern=r"help_back"))
 async def helpback(event):
-    if event.query.user_id in SUDO_USERS:    
-        await event.edit(
-            HELP_STRING,
-            buttons=[
-              [
+    await event.edit(
+        HELP_STRING,
+        buttons=[
+            [
                 Button.inline("ꜱᴘᴀᴍ", data="spam"),
                 Button.inline("ʀᴀɪᴅ", data="raid")
-              ],
-              [
+            ],
+            [
                 Button.inline("ᴇxᴛʀᴀ", data="extra")
-              ],
-              [
+            ],
+            [
                 Button.url("ᴜᴘᴅᴀᴛᴇ", "https://t.me/roy_editx"),
                 Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/the_friendz")
-              ]
             ]
-          )
-    else:
-        await event.answer("✦ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ xsᴘᴀᴍ ʙᴏᴛ, ʙʏ ~ @roy_editx", cache_time=0, alert=False)
-
-
+        ]
+    )
+    
 @X1.on(events.CallbackQuery(pattern=r"spam"))
 async def help_spam(event):
-    if event.query.user_id in SUDO_USERS:    
-        await event.edit(spam_msg,
-              buttons=[[Button.inline("< Back", data="help_back"),],],
-              ) 
-    else:
-        await event.answer("✦ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ xsᴘᴀᴍ ʙᴏᴛ, ʙʏ ~ @roy_editx", cache_time=0, alert=False)
-
+    await event.edit(
+        spam_msg,
+        buttons=[[Button.inline("< Back", data="help_back"),],],
+    )
 
 @X1.on(events.CallbackQuery(pattern=r"raid"))
 async def help_raid(event):
-    if event.query.user_id in SUDO_USERS:
-        await event.edit(raid_msg,
-            buttons=[[Button.inline("< Back", data="help_back"),],],
-          )
-    else:
-        await event.answer("✦ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ xsᴘᴀᴍ ʙᴏᴛ, ʙʏ ~ @roy_editx", cache_time=0, alert=False)
-
+    await event.edit(
+        raid_msg,
+        buttons=[[Button.inline("< Back", data="help_back"),],],
+    )
 
 @X1.on(events.CallbackQuery(pattern=r"extra"))
 async def help_extra(event):
-    if event.query.user_id in SUDO_USERS:
-        await event.edit(extra_msg,
-            buttons=[[Button.inline("< Back", data="help_back"),],],
-            )
-    else:
-        await event.answer("✦ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ xsᴘᴀᴍ ʙᴏᴛ, ʙʏ ~ @roy_editx", cache_time=0, alert=False)
+    await event.edit(
+        extra_msg,
+        buttons=[[Button.inline("< Back", data="help_back"),],],
+    )
+
