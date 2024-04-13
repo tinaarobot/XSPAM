@@ -1,5 +1,5 @@
 build:
   docker:
-    Altron: Dockerfile
+    Roy: Dockerfile
 run:
-  Altron: python3 -m main.py
+  Roy: python3 -m main.py
