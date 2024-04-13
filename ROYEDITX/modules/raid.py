@@ -26,13 +26,13 @@ async def raid(e):
             uid = entity.id
 
         try:
-                 if uid in AVISHA:
+            if uid in AVISHA:
                 await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ xsᴘᴀᴍ'ꜱ ᴏᴡɴᴇʀ.")
             elif uid == OWNER_ID:
                 await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ.")
             elif uid in SUDO_USERS:
                 await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ.")
-                 else:
+            else:
                 first_name = entity.first_name
                 counter = int(xraid[1])
                 username = f"[{first_name}](tg://user?id={uid})"
@@ -182,7 +182,14 @@ async def craid(e):
             entity = await e.client.get_entity(a.sender_id)
             uid = entity.id
 
-            try:
+        try:
+            if uid in AVISHA:
+                await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ xsᴘᴀᴍ'ꜱ ᴏᴡɴᴇʀ.")
+            elif uid == OWNER_ID:
+                await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ.")
+            elif uid in SUDO_USERS:
+                await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ.")
+            else:
                 first_name = entity.first_name
                 counter = int(xraid[1])
                 username = f"[{first_name}](tg://user?id={uid})"
@@ -195,4 +202,5 @@ async def craid(e):
             await e.reply(f"❖ 𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 ⏤͟͟͞͞★\n\n● 𝐂𝗥𝗮𝗶𝗱 ➥ {hl}raid <ᴄᴏᴜɴᴛ> <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n● {hl}raid <ᴄᴏᴜɴᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
         except Exception as e:
             print(e)
-      
+
+    
