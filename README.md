@@ -1,7 +1,7 @@
 
  
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"> 
- <img src="https://readme-typing-svg.herokuapp.com?color=C0C0C0&width=420&lines=🐝+ⓢⓘⓝⓖⓛⓔ+ⓑⓞⓣ+ⓣⓞⓚⓔⓝ+ⓢⓟⓐⓜ+ⓑⓞⓣ+ⓡⓔⓟⓞ+🐝">
+ <img src="https://readme-typing-svg.herokuapp.com?color=FF00FF&width=420&lines=🐝+ⓢⓘⓝⓖⓛⓔ+ⓑⓞⓣ+ⓣⓞⓚⓔⓝ+ⓢⓟⓐⓜ+ⓑⓞⓣ+ⓡⓔⓟⓞ+🐝">
 
 
 
