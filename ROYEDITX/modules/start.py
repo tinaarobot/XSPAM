@@ -20,9 +20,9 @@ START_BUTTON = [
 @X1.on(events.NewMessage(pattern="/start"))
 async def start(event):              
     if event.is_private:
-        ROYEDITX = await event.client.get_me()
-        bot_name = ROYEDITX.first_name
-        bot_id = ROYEDITX.id
+        Altbot = await event.client.get_me()
+        bot_name = Altbot.first_name
+        bot_id = Altbot.id
         TEXT = f"**❖ ʜᴇʏ [{event.sender.first_name}](tg://user?id={event.sender.id}),\n\n● ɪ ᴀᴍ [{bot_name}](tg://user?id={bot_id})**\n━━━━━━━━━━━━━━━━━━━\n\n"
         TEXT += f"● **ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ ➥ [ʀᴏʏ ᴇᴅɪᴛx](https://t.me/ROY_EDITX)**\n\n"
         TEXT += f"● **xʙᴏᴛꜱ ᴠᴇʀsɪᴏɴ ➥** `M3.3`\n"
