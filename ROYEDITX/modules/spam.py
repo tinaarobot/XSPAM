@@ -1,6 +1,5 @@
 
 import asyncio
-
 from ROYEDITX.data import GROUP, PORMS
 from config import X1, SUDO_USERS, CMD_HNDLR as hl
 from pyrogram import enums
@@ -50,10 +49,10 @@ async def spam(event: events):
                     await event.client.send_message(event.chat_id, message)
                     await asyncio.sleep(0.2)
             else:
-                await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 Altron\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 Altron <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
+                await event.reply(f"❖ **ᴜsᴀɢᴇ ➥** {hl}spam 13 Text\n\n● {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**❖ To do spam with replying to a user.**\n\n● {hl}spam 13 Text <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
 
         except (IndexError, ValueError):
-            await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 Altron\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 Altron <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
+            await event.reply(f"❖ **ᴜsᴀɢᴇ ➥** {hl}spam 13 Text\n\n● {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**❖ To do spam with replying to a user.**\n\n● {hl}spam 13 Text <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
         except Exception as e:
             print(e)
 
@@ -62,7 +61,7 @@ async def spam(event: events):
 async def pspam(event):
     if event.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         if event.chat_id in GROUP:
-            await event.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ᴀʟᴛʀᴏɴ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
+            await event.reply("✦ ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ xsᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
         else:
             try:
                 counter = int(event.text.split(" ", 2)[1])
@@ -72,7 +71,7 @@ async def pspam(event):
                     await gifspam(event, alt) 
                     await asyncio.sleep(0.2)
             except (IndexError, ValueError):
-                await event.reply(f"🔞 **Usage:**  {hl}pspam 13")
+                await event.reply(f"❖ **ᴜsᴀɢᴇ ➥**  {hl}pspam 13")
             except Exception as e:
                 print(e)
 
@@ -81,7 +80,7 @@ async def pspam(event):
 async def hang(e):
     if e.sender_id == enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
         if e.chat_id in GROUP:
-            await e.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ᴀʟᴛʀᴏɴ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
+            await e.reply("✦ ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ xsᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
         else:
             try:
                 counter = int(e.text.split(" ", 2)[1])
@@ -90,6 +89,6 @@ async def hang(e):
                     await e.respond(hang)
                     await asyncio.sleep(0.3)
             except (IndexError, ValueError):
-                await e.reply(f"😈 **Usage:** {hl}hang 10")
+                await e.reply(f"❖ **ᴜsᴀɢᴇ ➥** {hl}hang 10")
             except Exception as e:
                 print(e)
