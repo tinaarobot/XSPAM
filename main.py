@@ -27,11 +27,14 @@ for name in files:
         patt = Path(a.name)
         plugin_name = patt.stem
         load_plugins(plugin_name.replace(".py", ""))
+        
 
-print("♥︎ Bot Deployed Successfully, By - @ROY_EDITX")
+print("♥︎ Bot Deployed Successfully.")
+
 
 async def main():
     await X1.run_until_disconnected()
-    
+
+
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
