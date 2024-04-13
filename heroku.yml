@@ -2,4 +2,4 @@ build:
   docker:
     Altron: Dockerfile
 run:
-  Altron: python3 -m main.py
+  Altron: python3 -m main.p
