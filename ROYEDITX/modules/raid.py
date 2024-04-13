@@ -26,7 +26,7 @@ async def raid(e):
             uid = entity.id
 
         try:
-            if uid in ALTRON:
+            if uid in AVISHA:
                 await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ xsᴘᴀᴍ'ꜱ ᴏᴡɴᴇʀ.")
             elif uid == OWNER_ID:
                 await e.reply("✦ ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ.")
