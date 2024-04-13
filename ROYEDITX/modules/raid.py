@@ -6,7 +6,7 @@ from telethon import events
 from pyrogram import enums
 
 from config import X1, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
-from ROYEDITX.data import RAID, REPLYRAID, ALTRON, MRAID, SRAID, CRAID, ALTRON
+from ROYEDITX.data import RAID, REPLYRAID, AVISHA, MRAID, SRAID, CRAID, AVISHA
 
 REPLY_RAID = []
 
@@ -73,7 +73,7 @@ async def rraid(e):
 
         try:
             user_id = entity.id
-            if user_id in ALTRON:
+            if user_id in AVISHA:
                 await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀʟᴛʀᴏɴ'ꜱ ᴏᴡɴᴇʀ.")
             elif user_id == OWNER_ID:
                 await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ.")
@@ -183,7 +183,7 @@ async def craid(e):
             uid = entity.id
 
         try:
-            if uid in ALTRON:
+            if uid in AVISHA:
                 await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀʟᴛʀᴏɴ'ꜱ ᴏᴡɴᴇʀ.")
             elif uid == OWNER_ID:
                 await e.reply("ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ.")
