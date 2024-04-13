@@ -15,7 +15,7 @@ async def logs(legend):
         if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
             await legend.reply(
                 legend.chat_id,
-                "First Set These Vars In Heroku :  `HEROKU_API_KEY` And `HEROKU_APP_NAME`.",
+                "✦ First Set These Vars In Heroku ➥ `HEROKU_API_KEY` And `HEROKU_APP_NAME`.",
             )
             return
 
@@ -24,27 +24,27 @@ async def logs(legend):
             app = Heroku.app(HEROKU_APP_NAME)
         except BaseException:
             await legend.reply(
-                "Make Sure Your Heroku API Key & App Name Are Configured Correctly In Heroku."
+                "✦ Make Sure Your Heroku API Key & App Name Are Configured Correctly In Heroku."
             )
             return
 
         logs = app.get_log()
         start = datetime.now()
-        fetch = await legend.reply(f"__Fetching Logs...__")
+        fetch = await legend.reply(f"✦ Fetching Logs...")
     
         with open("AltLogs.txt", "w") as logfile:
-            logfile.write("⚡ XBOTS ⚡ [ Bot Logs ]\n\n" + logs)
+            logfile.write("✦ XSPAM ⚡ [ Bot Logs ]\n\n" + logs)
 
         end = datetime.now()
         ms = (end-start).seconds
         await asyncio.sleep(1)
 
         try:
-            await X1.send_file(legend.chat_id, "AltLogs.txt", caption=f"⚡ **XBOTS LOGS** ⚡\n  » **ᴛɪᴍᴇ ᴛᴀᴋᴇɴ:** `{ms} ꜱᴇᴄᴏɴᴅꜱ`")
+            await X1.send_file(legend.chat_id, "AltLogs.txt", caption=f"✦ **XSPAM BOT LOGS** ⚡\n\n● **ᴛɪᴍᴇ ᴛᴀᴋᴇɴ ➥** `{ms} ꜱᴇᴄᴏɴᴅꜱ`")
             await fetch.delete()
         except Exception as e:
-            await fetch.edit(f"An Exception Occured!\n\n**ERROR:** {str(e)}")
+            await fetch.edit(f"✦ An Exception Occured, ERROR ➥ {str(e)}")
 
     elif legend.sender_id in SUDO_USERS:
-        await legend.reply("» ꜱᴏʀʀʏ, ᴏɴʟʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ.")
+        await legend.reply("✦ ꜱᴏʀʀʏ, ᴏɴʟʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ.")
                          
