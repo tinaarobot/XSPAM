@@ -35,60 +35,60 @@ extra_msg = """
 **✦  ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ ♥︎**
 
 ❖ 𝗨𝘀𝗲𝗿𝗕𝗼𝘁 ➥ **ᴜꜱᴇʀʙᴏᴛ ᴄᴍᴅꜱ ⏤͟͟͞͞★**
-  ● {hl}ping 
-  ● {hl}reboot
-  ● {hl}sudo <reply to user> ➠ Owner Cmd
-  ● {hl}logs ➠ Owner Cmd
+  ● /ping 
+  ● /reboot
+  ● /sudo <reply to user> ➠ Owner Cmd
+  ● /logs ➠ Owner Cmd
 
 ❖ 𝗘𝗰𝗵𝗼 ➥ **ᴛᴏ ᴀᴄᴛɪᴠᴇ ᴇᴄʜᴏ ᴏɴ ᴀɴʏ ᴜꜱᴇʀ ⏤͟͟͞͞★**
-  ● {hl}echo <reply to user>
-  ● {hl}rmecho <reply to user>
+  ● /echo <reply to user>
+  ● /rmecho <reply to user>
 
 ❖ 𝗟𝗲𝗮𝘃𝗲 ➥ **ᴛᴏ ʟᴇᴀᴠᴇ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ ⏤͟͟͞͞★**
-  ● {hl}leave <group/chat id>
-  ● {hl}leave ➠ Type in the Group bot will auto leave that group
+  ● /leave <group/chat id>
+  ● /leave ➠ Type in the Group bot will auto leave that group
 """
 
 raid_msg = """
 **✦ ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ♥︎**
 
 ❖ 𝗥𝗮𝗶𝗱 ➥ **ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴀɪᴅ ᴏɴ ᴀɴʏ ɪɴᴅɪᴠɪᴅᴜᴀʟ ᴜꜱᴇʀ ꜰᴏʀ ɢɪᴠᴇɴ ʀᴀɴɢᴇ ⏤͟͟͞͞★**
-  ● {hl}raid <count> <username>
-  ● {hl}raid <count> <reply to user>
+  ● /raid <count> <username>
+  ● /raid <count> <reply to user>
 
 ❖ 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱 ➥ **ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ ⏤͟͟͞͞★**
-  ● {hl}rraid <replying to user>
-  ● {hl}rraid <username>
+  ● /rraid <replying to user>
+  ● /rraid <username>
 
 ❖ 𝗗𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱 ➥ **ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ ⏤͟͟͞͞★**
-  ● {hl}drraid <replying to user>
-  ● {hl}drraid <username>
+  ● /drraid <replying to user>
+  ● /drraid <username>
 
 ❖ 𝐌𝐑𝐚𝐢𝐝 ➥ **ʟᴏᴠᴇ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ⏤͟͟͞͞★ **
-  ● {hl}mraid <count> <username>
-  ● {hl}mraid <count> <reply to user>
+  ● /mraid <count> <username>
+  ● /mraid <count> <reply to user>
 
 ❖ 𝐒𝐑𝐚𝐢𝐝 ➥ **ꜱʜᴀʏᴀʀɪ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ ⏤͟͟͞͞★**
-  ● {hl}sraid <count> <username>
-  ● {hl}sraid <count> <reply to user>
+  ● /sraid <count> <username>
+  ● /sraid <count> <reply to user>
 
 ❖ 𝐂𝐑𝐚𝐢𝐝 ➥ **ᴀʙᴄᴅ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ ⏤͟͟͞͞★**
-  ● {hl}craid <count> <username>
-  ● {hl}craid <count> <reply to user>
+  ● /craid <count> <username>
+  ● /craid <count> <reply to user>
 """
 
 spam_msg = """
 **✦ ꜱᴘᴀᴍ ᴄᴏᴍᴍᴀɴᴅꜱ ♥︎**
 
 ❖ 𝗦𝗽𝗮𝗺 ➥ **ꜱᴘᴀᴍꜱ ᴀ ᴍᴇꜱꜱᴀɢᴇ ⏤͟͟͞͞★**
-  ● {hl}spam <count> <message to spam> 
-  ● {hl}spam <count> <replying any message>
+  ● /spam <count> <message to spam> 
+  ● /spam <count> <replying any message>
 
 ❖ 𝗣𝗼𝗿𝗻𝗦𝗽𝗮𝗺 ➥ **ᴘᴏʀᴍᴏɢʀᴀᴘʜʏ ꜱᴘᴀᴍ ⏤͟͟͞͞★**
-  ● {hl}pspam <count>
+  ● /pspam <count>
 
 ❖ 𝗛𝗮𝗻𝗴 ➥ **ꜱᴘᴀᴍꜱ ʜᴀɴɢɪɴɢ ᴍᴇꜱꜱᴀɢᴇ ꜰᴏʀ ɢɪᴠᴇɴ ᴄᴏᴜɴᴛᴇʀ ⏤͟͟͞͞★**
-  ● {hl}hang <counter>
+  ● /hang <counter>
 """
 
 @X1.on(events.CallbackQuery(pattern=r"help_back"))
@@ -102,10 +102,6 @@ async def helpback(event):
             ],
             [
                 Button.inline("ᴇxᴛʀᴀ", data="extra")
-            ],
-            [
-                Button.url("ᴜᴘᴅᴀᴛᴇ", "https://t.me/roy_editx"),
-                Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/the_friendz")
             ]
         ]
     )
@@ -114,20 +110,20 @@ async def helpback(event):
 async def help_spam(event):
     await event.edit(
         spam_msg,
-        buttons=[[Button.inline("< Back", data="help_back"),],],
+        buttons=[[Button.inline("ʙᴀᴄᴋ", data="help_back"),],],
     )
 
 @X1.on(events.CallbackQuery(pattern=r"raid"))
 async def help_raid(event):
     await event.edit(
         raid_msg,
-        buttons=[[Button.inline("< Back", data="help_back"),],],
+        buttons=[[Button.inline("ʙᴀᴄᴋ", data="help_back"),],],
     )
 
 @X1.on(events.CallbackQuery(pattern=r"extra"))
 async def help_extra(event):
     await event.edit(
         extra_msg,
-        buttons=[[Button.inline("< Back", data="help_back"),],],
+        buttons=[[Button.inline("ʙᴀᴄᴋ", data="help_back"),],],
     )
 
